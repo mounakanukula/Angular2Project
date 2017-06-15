@@ -1,0 +1,29 @@
+
+<div class="container-fluid">
+	<div class="row">
+        <div class="col-sm-4">
+            <div id="imaginary_container"> 
+<div id="search-component">
+  <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control" #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Search Partner">
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+</div>
+            </div>
+        </div>
+	</div>
+
+
+  <!--input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Search Partner"-->
+   
+  <div>
+    <div *ngFor="let partner of partners | async"
+         (click)="gotoDetail(partner)" class="search-result" >
+      {{partner.name}}
+    </div>
+  </div>
+</div>

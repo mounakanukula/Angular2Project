@@ -1,0 +1,113 @@
+<div  class="container">
+  <div>
+  <div  class="row"  *ngIf="!authService.isLoggedIn">
+    <h2>
+      <strong>Login</strong>
+    </h2>
+  </div>
+<div *ngIf="authService.isLoggedIn">
+  <h3>You have logged In Successfully </h3> </div>
+
+    <form class="smart-form ng-untouched ng-pristine ng-valid" id="login-form" novalidate="novalidate" ng-reflect-sa-ui-validate="[object Object]">
+
+
+        <section>
+          <div class="row" *ngIf="!authService.isLoggedIn">
+            <div class="col-md-8">
+            <label class="label col col-6">Username</label>
+            <div  class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon"> <i class="icon-append fa fa-user"> </i> </div>
+                <input class="form-control"name="email" type="email" placeholder="Username">
+
+              </div>
+            </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="row" *ngIf="!authService.isLoggedIn">
+            <div class="col-md-8">
+            <label class="label col col-6">Password</label>
+
+            <div  class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon"> <i class="icon-append fa fa-lock"></i> </div>
+                <input class="form-control" name="password" type="password" placeholder="Password">
+              </div>
+
+            </div>
+              <div class="note">
+                <a *ngIf="!authService.isLoggedIn">Forgot password?</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-md-3">
+        <section *ngIf="!authService.isLoggedIn">
+
+
+              <label class="checkbox">
+                <input checked="" name="remember" type="checkbox">
+                <i></i>Keep me logged in</label>
+
+        </section>
+
+
+        </div>
+          <div class="col-md-3">
+            <nav>
+              <a (click)="toRegister()" *ngIf="!authService.isLoggedIn"> Register here  </a>
+            </nav>
+          </div>
+        
+          <div class="col-md-3">
+            <footer>
+
+              <button class="btn btn-primary" (click)="login()"  *ngIf="!authService.isLoggedIn">
+                Login
+              </button>
+              <button class="btn btn-primary" id="logout"  (click)="logout()"  *ngIf="authService.isLoggedIn">
+                Logout
+              </button>
+            </footer>
+
+          </div>
+        </div>
+    </form>
+
+
+  </div>
+  </div>
+
+
+
+<!--div>
+<form>
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group" *ngIf="!authService.isLoggedIn"> 
+  <h3> Login Here! </h3>
+<label> UserName </label>
+<input type="text" class="form-control"/>
+</div>
+<div class="form-group" *ngIf="!authService.isLoggedIn">
+<label> Password </label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+    <p>
+      <button class="btn btn-primary" (click)="login()"  *ngIf="!authService.isLoggedIn">Login</button>
+      <button id="logout" class="btn btn-primary" (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
+      <a href="#" *ngIf="!authService.isLoggedIn">Register Here</a>
+    </p>
+      
+  </div>
+  </div>
+  </div>
+  </div>
+</form>
+
+</div-->

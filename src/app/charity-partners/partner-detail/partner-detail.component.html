@@ -1,0 +1,48 @@
+
+
+<div *ngIf="partner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+  <h2> <strong>{{partner.name}}</strong></h2>
+        <div>
+          {{partner.des}}
+        </div>
+  <div>
+    <strong>{{partner.url}}</strong>
+  </div>
+  <div>
+    <label> Identification Number:  </label>
+    {{partner.id}}
+  </div>
+  <button type="button" class="btn btn-danger" (click)="goBack()"> Back </button>
+        <button type="button" class="btn btn-primary" (click)="toEdit(partner)"> Edit </button>
+        <!--<button type="button" class="btn btn-success"> Donate </button>-->
+        
+</div>
+
+    </div>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+<div class="panel panel-default" *ngIf="editPartner" id="edit">
+  <div class="panel-heading">
+  <h2> <strong> Edit Here </strong> </h2>
+  <label>  </label>
+  <h4> Partner Name: <strong> {{partner.name}}</strong></h4>
+  <div class="form-group">
+    <label> Description </label>
+  <input class="form-control" [(ngModel)]="partner.des"/>
+  <div>
+  <button type="button" class="btn btn-success" (click)="save()"> Save </button>
+  </div>
+  </div>
+  </div>
+</div>
+  </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,23 @@
+#logout{
+        position: absolute;
+    top: -7em;
+    right: -18em;
+}
+
+h2{
+  font-size:30px;
+}
+a{
+  cursor:pointer;
+}
+footer .btn{
+ height:50px;
+  width:90px;
+  margin: 10px;
+  padding: 10px;
+  font: 300 18px/29px 'Open Sans',Helvetica,Arial,sans-serif;
+  cursor: pointer;
+  position: relative;
+  top: -25px;
+  right: 66px;
+}

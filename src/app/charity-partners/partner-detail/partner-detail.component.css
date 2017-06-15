@@ -1,0 +1,12 @@
+#edit{
+    position: relative;
+    left: 10em;
+    top: 3em;
+}
+button{
+    width:100px;
+    height:44px;
+    margin: 10px;
+    padding: 5px;
+    font-size:18px;
+}

@@ -1,0 +1,38 @@
+
+<div class="container">
+ 
+  <h2> <strong>Charity Partners </strong></h2>
+  <p> Global Cause serves and represents an alliance of more than 100 international relief and development nonprofit organizations. These organizations range from large agencies with worldwide recognition to charities providing vital services on a smaller scale. Rigorous membership standards ensure that each charity practices sound financial management and effective program delivery to help the world’s most vulnerable people.</p>
+  <hr>
+  <div>
+    <h2> <strong> Charity Partners List </strong></h2>
+    </div>
+  <div>
+    <partner-search> </partner-search>
+  <ul class="heroes">
+    <li *ngFor="let partner of partners" [class.selected]="partner === selectedPartner" (click)="onSelect(partner)">
+      {{partner.name}}
+    <div class="des"> {{partner.des}}</div>
+     <button class="delete" 
+      (click)="delete(partner); $event.stopPropagation()">Delete</button>
+    </li>
+  </ul>
+  <div id="partner">
+  <label> Add New Partner Here</label>
+  <div class="form-group">
+    <input class="form-control" type="text" #partnerName/>
+  </div>
+  <div>
+    <button class="btn btn-success" type="button" (click)="add(partnerName.value)"> Add Partner</button>
+  </div>
+  </div>
+  
+  
+  
+  <!// ngClass to add or remove CSS class(.selected); click event-->
+  <partner-detail [partner]="selectedPartner"> </partner-detail><!--hero is an input property(target binding expression)-->
+  <!--Here the appcomponent is telling the herodetailcomponent which hero to display by binding its selectedhero to hero property of herodetailcomponent-->
+  <!-- this hero property is an input property in herodetailcomponent-->
+</div>
+</div>
+

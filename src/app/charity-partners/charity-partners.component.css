@@ -1,0 +1,57 @@
+.selected {
+  background-color: #c2d6d6 !important;
+  color: white !important;
+}
+p{
+  font-size: 16px;
+}
+.des{
+  font-size: 16px;
+  color:#00264d;
+}
+.heroes li {
+  cursor: pointer;
+  background-color: #e6e6e6;
+  padding: 5px;
+  width: 30em;
+  height: 6em;
+  color: #ff8533 ;
+  list-style-type: none;
+  font-size:20px;
+
+}
+.heroes li:hover{
+  background-color: #cccccc;
+  color: #4d4d4d;
+  position: relative;
+  left: 5px;
+}
+.heroes li.selected:hover{
+  background-color:#94b8b8 !important;
+  color: white;
+
+}
+.badge{
+  background-color: #00324d;
+  padding: 23px;
+  position: relative;
+  bottom: 15px;
+  right:20px;
+  color: #ffffff;
+  margin:15px;
+  border-radius: 5px 5px;
+
+
+}
+#partner{
+      position: absolute;
+    left: 68em;
+    top: 30em;
+}
+button.delete {
+  float:right;
+  margin-top: 2px;
+  margin-right: .8em;
+  background-color: white !important;
+  color:blue;
+}

@@ -1,0 +1,18 @@
+h3{
+  text-align: center;
+}
+.panel{
+  width:270px;
+  position:relative;
+  top:20px;
+}
+.panel-heading{
+  height:160px;
+}
+p {
+  font-size:16px;
+
+}
+a{
+  cursor: pointer;
+}

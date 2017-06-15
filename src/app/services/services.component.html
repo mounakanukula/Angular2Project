@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <address>
+            <strong> Contact Us </strong> <br>
+            For more information: <br>
+            Email: charityinquiries@charity.org <br>
+            Call: 1-800-836-4620
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div>
+        <h2> <strong> Description </strong> </h2>
+        <hr>
+      </div>
+      <p> The Partner Solutions team brings customized consulting services to the NGO and private sectors through a full suite of services including strategy, implementation and ongoing organizational support to meet your social impact goals.
+      </p>
+      <p>Partner with us to build your future solution!</p>
+      
+      <h3> <strong>Some of Our Clients </strong> </h3>
+      <hr>
+      <div class="row">
+          <a *ngFor="let client of clients" [routerLink]="['/client', client.id]">
+          <div class="col-lg-3">
+            <div class="bg-success text-white">
+              {{client.name}}
+            </div>
+            <div>
+              {{client.des}}
+            </div>
+          </div>
+
+          </a>
+
+        </div>
+    <div>
+ 
+    </div>
+      </div>
+    </div>
+  </div>
+
+
